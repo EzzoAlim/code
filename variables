@@ -6,3 +6,46 @@ return 0;
 
 Output
 22
+
+
+CHANGE VALUE OF VARIABLES:
+#include <stdio.h>
+int main () {
+int age = 15;
+printf("AGE : %d\n",age);
+  age= 22;
+printf("New age : %d",age);
+
+return 0;
+ 
+
+OUTPUT
+AGE :15
+New age :22
+
+
+Assign one variable to another variale:
+#include <stdio.h>
+int firstnumber=22;
+printf("firstnumber = %d" ,firstnumber);
+int secondnumber= firstnumber;
+printf("\nsecondnumber = %d",secondnumber);
+               return 0;
+}
+
+# program quiz_:
+Q. Can you guess the output of this program?
+
+#include <stdio>
+int main() {
+int number2 = 77;
+printf("%d", number2);
+printf("%d", number2);
+
+return 0;
+}
+
+OUTPUT:
+A) 7777 B)77 77 C)77.0 D)77
+
+Correct answer:A
