@@ -1,0 +1,21 @@
+Print formatted double output:
+#include <stdio.h>
+int main () {
+double number= 22.5;
+printf("%.2lf",number);
+return 0;
+}
+OUTPUT:
+22.50
+
+#include <stdio.h>
+int main () {
+double number = 22.2;
+float number1 = 10.5f;
+printf("%.2lf",number);
+  printf("\n%f", number1);
+return 0;
+}
+OUTPUT;
+22.20
+10.500000
