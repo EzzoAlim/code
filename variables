@@ -1,0 +1,8 @@
+int main () {
+int age= 22;
+printf("AGE : %d",age);
+return 0;
+}
+
+Output
+22
