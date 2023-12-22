@@ -62,5 +62,49 @@ ENTER A NUMBER :2
 2 IS AN EVEN NUMBER
 
 4) DETERMINE WHETHER A TEMPREATURE IS BELOW OR ABOVE THE FREEZING POINT.
+#include <stdio.h>
+int main (){
+float tempreature;
 
+printf("enter determine of tempreature :");
+scanf("%f", &tempreature);
+
+if ( tempreature < 0){
+printf("the tempreature is belw of freezing point\n.");}
+
+else if (tempreature == 0){
+printf("the tempreature equal to freezing point\n.");
+
+}else{
+printf("the tempreature above of freezing point\n.");
+}
+
+return 0;
+}
+
+OUTPUT:
+enter determine of tempreature :0
+the tempreature equal to freezing point
+
+enter determine of tempreature : -5
+the tempreature is belw of freezing poin
+
+
+5) CONVERT TEMPERATURE FROM FAHRENHEIT (℉) TO CELSIUS (℃). 
+#include <stdio.h>
+int main (){
+ float fahrenheit, celsius;
+
+printf("enter tempreature of fahrenheit :");
+scanf("%f",&fahrenheit);
+
+// conversion formula : celsius=(fahrenheit-32)*5/9
+celsius=(fahrenheit-32) *5/9;
+
+printf("tempreature in celsius %.2f\n",celsius);
+return 0;
+}
+OUTPUT :
+enter tempreature of fahrenheit :68
+tempreature in celsius 20.00
 
