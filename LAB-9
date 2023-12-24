@@ -1,4 +1,4 @@
-1) Write a C program for computing factorial N (N!).
+1)WRITE A C PROGRAM FOR COMPUTING FACTORIAL N (N!). 
 
 #include <stdio.h>
 
@@ -34,8 +34,7 @@ OUTPUT:
 Enter a number to find its factorial: 5
 The factorial of 5 is: 120
 
-2) Write a C program which generates even numbers between 1000 and 2000
-and then prints them.
+2)WRITE A C PROGRAM WHICH GENERATES EVEN NUMBERS BETWEEN 1000 AND 2000. AND THEN PRINTS THERM.
 
 #include <stdio.h>
 
@@ -63,9 +62,7 @@ Even numbers between 1000 and 2000:
 2000
 
 
-3) Write a C program to check whether a given number from keyboard is
-Palindrome number or not
-
+3) WRITE A C PROGRAM TO CHECK WHETHER A GIVEN NUMBER FROM KEYBORD IS PALINDROME NUMBER OR NOT.
 
 #include <stdio.h>
 
@@ -107,7 +104,7 @@ Enter a number to check if it's a palindrome: 12321
 12321 is a palindrome number.
 
 
-5) Write a C program to display the sum of the series [ 1+x+x^2/2!+x^3/3!+....].
+4)WRITE A C PROGRAM TO DISPLAY THE SUM OF SERIES W[ 1+X+X^2/2!+X^3/3!+....].
 
 #include <stdio.h>
 
