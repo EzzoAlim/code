@@ -1,106 +1,76 @@
 1) Write C code to add two numbers entered by user.
-
 #include <stdio.h>
 int main () {
 int number1,number2;
-
 printf("enter number1 :");
 scanf("%d",number1);
 printf("enter number2 :");
 scanf("%d",number2);
-
 int sum=0;
 sum=number1+number2;
 printf("%d",sum);
-
 OUTPUT:
 enter number1 :
 enter number2 :
 sum=
-
 2)CALCULATE THE AREA OF A CIRCLE WITH GIVEN RADIUS: 
 #include <stdio.h>
 #define PI 3.14
 int main (){
 float area,radius;
-
 printf("enter the radius of the circle :");
 scanf("%f",&radius);
-
 area= PI *radius *radius;
-
 printf("the area of circle is with radius is : %.2f",area,radius);
-
 return 0;
 }
-
 OUTPUT:
 enter the radius of the circle :
 the area of circle is with radius is :
-
 3) DETERMINE AND OUTPUT WHETHER NUMBER 'N' IS EVEN OR ODD: 
 #include <stdio.h>
-int main (){
-    
+int main (){   
     int number;
-    
     printf("ENTER A NUMBER :");
     scanf("%d",&number);
-    
     if (number % 2==0)
 {
     printf("%d IS AN EVEN NUMBER\n",number);}
    else {
     printf("%d IS AN ODD NUMBER\n",number);}
-  
 return 0;
 }
-
-
 OUTPUT:
 ENTER A NUMBER :2
 2 IS AN EVEN NUMBER
-
 4) DETERMINE WHETHER A TEMPREATURE IS BELOW OR ABOVE THE FREEZING POINT.
 #include <stdio.h>
 int main (){
 float tempreature;
-
 printf("enter determine of tempreature :");
 scanf("%f", &tempreature);
-
 if ( tempreature < 0){
 printf("the tempreature is belw of freezing point\n.");}
-
 else if (tempreature == 0){
 printf("the tempreature equal to freezing point\n.");
-
 }else{
 printf("the tempreature above of freezing point\n.");
 }
-
 return 0;
 }
-
 OUTPUT:
 enter determine of tempreature :0
 the tempreature equal to freezing point
-
 enter determine of tempreature : -5
 the tempreature is belw of freezing poin
-
-
 5) CONVERT TEMPERATURE FROM FAHRENHEIT (℉) TO CELSIUS (℃). 
 #include <stdio.h>
 int main (){
  float fahrenheit, celsius;
-
 printf("enter tempreature of fahrenheit :");
 scanf("%f",&fahrenheit);
-
 // conversion formula : celsius=(fahrenheit-32)*5/9
 celsius=(fahrenheit-32) *5/9;
-
 printf("tempreature in celsius %.2f\n",celsius);
 return 0;
 }
@@ -108,3 +78,21 @@ OUTPUT :
 enter tempreature of fahrenheit :68
 tempreature in celsius 20.00
 
+6) Write C code to convert the length in feet to centimeter.
+
+#include <stdio.h>
+int main() {
+    float feet, cm;
+   // Input length in feet
+
+    printf("Enter length in feet: ");
+    scanf("%f", &feet);
+   
+// Convert feet to centimeters (1 foot = 30.48 centimeters)
+    cm = feet * 30.48;
+    // Display the result
+   
+printf("%.2f feet is equal to %.2f centimeters\n", feet, cm);
+    return 0;
+}
+*7) Write C code to find the largest of three numbers A, B, and C.*
