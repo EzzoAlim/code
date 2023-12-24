@@ -1,0 +1,143 @@
+1) Write a C program for computing factorial N (N!).
+
+#include <stdio.h>
+
+unsigned long long factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        unsigned long long fact = 1;
+        for (int i = 2; i <= n; ++i) {
+            fact *= i;
+        }
+        return fact;
+    }
+}
+
+int main() {
+    int number;
+
+    printf("Enter a number to find its factorial: ");
+    scanf("%d", &number);
+
+    if (number < 0) {
+        printf("Factorial of negative numbers is not defined.\n");
+    } else {
+        unsigned long long result = factorial(number);
+        printf("The factorial of %d is: %llu\n", number, result);
+    }
+    return 0;
+}
+
+
+OUTPUT:Enter a number to find its factorial: 5
+The factorial of 5 is: 120
+
+2) Write a C program which generates even numbers between 1000 and 2000
+and then prints them.
+
+#include <stdio.h>
+
+int main() {
+    printf("Even numbers between 1000 and 2000:\n");
+
+    for (int num = 1000; num <= 2000; num++) {
+        if (num % 2 == 0) {
+            printf("%d\n", num);
+        }
+    }
+
+    return 0;
+}
+
+OUTPUT:
+Even numbers between 1000 and 2000:
+1000
+1002
+1004
+1006
+.
+.
+.
+2000
+
+
+3) Write a C program to check whether a given number from keyboard is
+Palindrome number or not
+
+
+#include <stdio.h>
+
+
+int isPalindrome(int num) {
+    int reversedNum = 0;
+    int originalNum = num;
+
+    while (num > 0) {
+        int digit = num % 10;
+        reversedNum = reversedNum * 10 + digit;
+        num /= 10;
+    }
+
+    if (originalNum == reversedNum) {
+        return 1; // Palindrome
+    } else {
+        return 0; // Not a palindrome
+    }
+}
+
+int main() {
+    int number;
+
+    printf("Enter a number to check if it's a palindrome: ");
+    scanf("%d", &number);
+
+    if (isPalindrome(number)) {
+        printf("%d is a palindrome number.\n", number);
+    } else {
+        printf("%d is not a palindrome number.\n", number);
+    }
+
+    return 0;
+}
+
+OUTPUT:
+Enter a number to check if it's a palindrome: 12321
+12321 is a palindrome number.
+
+
+5) Write a C program to display the sum of the series [ 1+x+x^2/2!+x^3/3!+....].
+
+#include <stdio.h>
+
+double calculateSeries(double x, int terms) {
+    double sum = 1.0; // First term of the series
+    double term = 1.0;
+
+    for (int i = 1; i < terms; ++i) {
+        term *= x / i; // Calculate the next term
+        sum += term; // Add the term to the sum
+    }
+
+    return sum;
+}
+
+int main() {
+    double x;
+    int numberOfTerms;
+
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &numberOfTerms);
+
+    double result = calculateSeries(x, numberOfTerms);
+    printf("Sum of the series: %.4lf\n", result);
+
+    return 0;
+}
+OUTPUT:
+Enter the value of x: 3
+Enter the number of terms: 2
+Sum of the series: 4.0000
