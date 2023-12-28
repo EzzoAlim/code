@@ -139,3 +139,33 @@ OUTPUT:
 Enter the value of x: 3
 Enter the number of terms: 2
 Sum of the series: 4.0000
+
+
+5)  Write a C program to find the largest of three numbers A, B, and C given from keyboard.
+#include <stdio.h>
+
+int main() {
+
+  int A=1,B=2,C;
+
+  printf("enter a number A :\n");
+  scanf("%d",&A);
+
+   printf("enter a number B:\n");
+  scanf("%d",&B);
+
+   printf("enter a number C:\n");
+  scanf("%d",&C);
+
+  if (A > B && A>C)
+{
+  printf("A IS THE BIGEST ONE:%d\n");}
+ else if  (B > A  && B > C)
+{
+  printf("B IS THE BIGEST ONE:%d\n");}
+  else if  (C >A  && C>B)
+{
+printf("C IS THE BIGEST ONE :%d\n");}  
+   
+return 0;
+} 
