@@ -1,38 +1,32 @@
 1)WRITE A C PROGRAM FOR COMPUTING FACTORIAL N (N!). 
 
 #include <stdio.h>
+int main (){
+int number;
 
-unsigned long long factorial(int n) {
-    if (n == 0 || n == 1) {
-        return 1;
-    } else {
-        unsigned long long fact = 1;
-        for (int i = 2; i <= n; ++i) {
-            fact *= i;
-        }
-        return fact;
-    }
-}
+printf("enter a number");
+scanf("%d",&number);
 
-int main() {
-    int number;
+int count=1;
 
-    printf("Enter a number to find its factorial: ");
-    scanf("%d", &number);
+   while(number<=10){
+int result = count*number;
+printf("%d\n",number);
+count=count+1;}
 
-    if (number < 0) {
-        printf("Factorial of negative numbers is not defined.\n");
-    } else {
-        unsigned long long result = factorial(number);
-        printf("The factorial of %d is: %llu\n", number, result);
-    }
-    return 0;
-}
+
 
 
 OUTPUT:
-Enter a number to find its factorial: 5
-The factorial of 5 is: 120
+Enter a number :5
+5
+10
+15
+20
+25
+30
+
+
 
 2)WRITE A C PROGRAM WHICH GENERATES EVEN NUMBERS BETWEEN 1000 AND 2000. AND THEN PRINTS THERM.
 
