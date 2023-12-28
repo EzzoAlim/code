@@ -139,7 +139,7 @@ printf("%.2f feet is equal to %.2f centimeters\n", feet, cm);
     return 0;
 }
 *7) Write C code to find the largest of three numbers A, B, and C.*
-
+#include <stdio.h>
 int main() {
   int A=1,B=2,C=3;
   
