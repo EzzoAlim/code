@@ -1,0 +1,85 @@
+1-Enter a value from the keyboard to the 8-element float array. Calculate the average of the entered values and print it on the screen.
+#include <stdio.h>
+
+void main () {
+    /*Enter a value from the keyboard to the 8-element float
+    entered values and print it on the sreen.*/
+    float sum,a[8],ort;
+    for (int i=0;i<8;i++)
+    {
+    printf("enter a number\n");
+    scanf("%f",&a[i]);
+    sum=sum+a[i];
+    
+    }
+    avrj=sum/8;
+    printf("%.2f",avrj);
+    return 0;
+}
+
+
+
+
+
+
+2-Write a program that transfers the numbers given until -1 is entered from the keyboard, and then prints the square of each element to the screen. (The number of array elements will be maximum 10.)
+#include <stdio.h>
+#include <math.h>
+void main() {
+int a(10),number;
+for (int i=0;i<10;i++)
+}
+printf("enter a number :\n");
+scanf("%d",& a[i]));
+if (a[i]!=1)
+{ 
+    printf("%d\n",a[i]*a[i]);
+}
+else
+break;
+}
+
+}
+
+
+
+
+3- Write a program that assigns the digits of the maximum 5-digit number to an array and prints it to the screen
+void main (){
+    int a[5],number,digit;
+    printf("enter a number");
+    scanf("%d",&number);
+    for (int i=0;i<5;i++)
+{
+    digit=number%10;
+    a[i]=digit;
+    number=number/10;
+}
+for (int i=1;i<=5;i++)
+{
+    printf("%d ",a [5-1]);
+    
+}
+}
+4-Write a program that takes a 10-element array from the keyboard and writes it in reverse to the screen. (1.5,2,4,5,6,78,12,1.3 => 3.1,12,78,6,5,4,2,5,1)
+#include <stdio.h>
+    #include <math.h>
+
+    void main(){
+    /* Write a program that takes a 10-element array from the keyboard and writes it in reverse to
+the screen. (1.5,2,4,5,6,78,12,1.3 => 3.1,12,78,6,5,4,2,5,1)
+    */ 
+    int a[10],number,digit;
+    
+    for (int i = 0; i <10; i++)
+    {  
+        printf("Enter a number");
+        scanf("%d",&number);
+        a[i]=number;
+    }
+    for (int i = 1; i <= 10; i++)
+    {
+        
+        printf("%d,",a[10-i]);
+    }
+}
