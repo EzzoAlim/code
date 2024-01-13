@@ -1,0 +1,178 @@
+1-The 10-element integer array will be sent to a function by entering values from the keyboard. Write a
+function that finds the "biggest first two numbers" in the array and prints it to the screen.
+
+
+#include <stdio.h>
+
+// Function to find and print the two largest numbers in the array
+void findTwoLargest(int arr[], int size) {
+    if (size < 2) {
+        printf("Array size should be at least 2.\n");
+        return;
+    }
+
+    int firstMax = arr[0];
+    int secondMax = arr[1];
+
+    // Iterate through the array to find the two largest numbers
+    for (int i = 2; i < size; i++) {
+        if (arr[i] > firstMax) {
+            secondMax = firstMax;
+            firstMax = arr[i];
+        } else if (arr[i] > secondMax && arr[i] != firstMax) {
+            secondMax = arr[i];
+        }
+    }
+
+    // Print the two largest numbers
+    printf("The two largest numbers are: %d and %d\n", firstMax, secondMax);
+}
+
+int main() {
+    int arr[10];
+
+    // Input values for the array from the keyboard
+    printf("Enter 10 integer values for the array:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Enter value %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    // Call the function to find and print the two largest numbers
+    findTwoLargest(arr, 10);
+
+    return 0;
+}
+
+
+2-Write a program that puts the characters in the string sent to the function in alphabetical order.
+Örnek giriş : “Ahmet merhaba”
+Sonu : “Aaabe ehhmmrt”
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+// Function to sort the characters in a string in alphabetical order
+void sortString(char str[]) {
+    int n = strlen(str);
+
+    // Bubble sort to sort the characters
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (tolower(str[j]) > tolower(str[j + 1])) {
+                // Swap characters if they are not in alphabetical order
+                char temp = str[j];
+                str[j] = str[j + 1];
+                str[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    char inputString[100];
+
+    // Input a string from the user
+    printf("Enter a string: ");
+    fgets(inputString, sizeof(inputString), stdin);
+
+    // Remove the newline character from the input
+    inputString[strcspn(inputString, "\n")] = '\0';
+
+    // Call the function to sort the characters in the string
+    sortString(inputString);
+
+    // Print the result
+    printf("Sorted string: %s\n", inputString);
+
+    return 0;
+}
+3- Write the function that finds how many vowels are in the word sent by the user.
+
+
+#include <stdio.h>
+#include <ctype.h>
+
+// Function to count the number of vowels in a word
+int countVowels(char word[]) {
+    int count = 0;
+
+    for (int i = 0; word[i] != '\0'; i++) {
+        char currentChar = tolower(word[i]); // Convert to lowercase for case-insensitivity
+
+        // Check if the current character is a vowel
+        if (currentChar == 'a' || currentChar == 'e' || currentChar == 'i' ||
+            currentChar == 'o' || currentChar == 'u') {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    char userInput[100];
+
+    // Input a word from the user
+    printf("Enter a word: ");
+    scanf("%s", userInput);
+
+    // Call the function to count vowels and print the result
+    int vowelCount = countVowels(userInput);
+    printf("Number of vowels in the word: %d\n", vowelCount);
+
+    return 0;
+}
+
+4-Write a function that adds a given element to an array in ascending order without changing the order
+of the array.
+Girilen dizi : 1 3 5 7 9
+Eklenecek sayi : 4
+Dizinin son hali : 1 3 4 5 7 9
+
+#include <stdio.h>
+
+// Function to add an element to an array in ascending order
+void insertElement(int arr[], int *size, int element) {
+    int i, j;
+
+    // Find the position to insert the element while maintaining ascending order
+    for (i = 0; i < *size; i++) {
+        if (arr[i] > element) {
+            // Shift elements to make room for the new element
+            for (j = *size; j > i; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[i] = element;
+            (*size)++;
+            return;
+        }
+    }
+
+    // If the element is greater than all existing elements, add it at the end
+    arr[*size] = element;
+    (*size)++;
+}
+
+int main() {
+    int arr[10] = {1, 3, 5, 7, 9};
+    int size = 5; // Initial size of the array
+
+    int elementToAdd;
+
+    // Input the element to be added
+    printf("Enter the element to add: ");
+    scanf("%d", &elementToAdd);
+
+    // Call the function to insert the element in ascending order
+    insertElement(arr, &size, elementToAdd);
+
+    // Print the updated array
+    printf("Updated array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
